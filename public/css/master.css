@@ -1,0 +1,26 @@
+body {
+  padding-bottom: 40px;
+  color: #5a5a5a;
+}
+
+.background {
+	color: #5a5a5a;
+}
+
+h1	{
+	text-align: center;
+	padding-top: 100px;
+}
+
+#main.container {
+	padding-top: 70px;
+}
+
+#myCarousel {
+	position: absolute;
+}
+
+#art.container {
+	text: ;
+}
+

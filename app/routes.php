@@ -11,34 +11,19 @@
 |
 */
 
-Route::get('/', function()
-{
-	return View::make('hello');
-});
+Route::get('/', 'HomeController@showWelcome');
 
-Route::get('say-hello', function()
-{
-	return "Hello Codeup!";
-});
+Route::get('say-hello/{name}', 'HomeController@sayHello');
+Route::get('roll-dice/{guess}', 'HomeController@rollDice');
 
-Route::get('say-hello/{name}', function($name)
-{
-	if ($name =='John') {
-		return Redirect::to('/');
-	} else {
-		return "Hello $name";
-	}
-});
+Route::get('resume', 'HomeController@showResume');
+Route::get('portfolio', 'HomeController@showPortfolio');
 
-Route::get('resume', function()
-{
-	return 'This is my resume!';
-});
+Route::get('login', 'HomeController@showLogin');
+Route::post('login', 'HomeController@doLogin');
+Route::get('login', 'HomeController@doLogout');
 
-Route::get('portfolio', function()
-{
-	return 'This is my portfolio!';
-});
+Route::resource('posts', 'PostsController');
 
 
 
