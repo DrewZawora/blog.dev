@@ -1,6 +1,6 @@
 <?php
 
-class Post extends Eloquent
+class Post extends BaseModel
 {
 
 	public static $rules = array(
